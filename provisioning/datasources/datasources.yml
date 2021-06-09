@@ -1,13 +1,9 @@
 apiVersion: 1
 deleteDatasources:
-  - name: YOUR_DATASOURCE_NAME
+  - name: Pyroscope
     orgId: 1
 datasources:
-  - name: YOUR_DATASOURCE_NAME
-    version: 1
-    type: YOUR_PLUGIN_ID
-    url: YOUR_URL
+  - name: Pyroscope
+    type: pyroscope-datasource
     jsonData:
-      customSetting: YOUR_CUSTOM_SETTING
-    secureJsonData:
-      key: YOUR_TEST_KEY
+      path: "http://pyroscope:4040"

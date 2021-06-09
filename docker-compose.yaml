@@ -6,3 +6,10 @@ services:
     - 3000:3000
     volumes:
     - ./provisioning:/etc/grafana/provisioning
+
+  pyroscope:
+    image: pyroscope/pyroscope:latest
+    command:
+      - server
+    ports:
+      - 4040:4040

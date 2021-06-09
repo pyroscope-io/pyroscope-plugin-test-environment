@@ -19,76 +19,64 @@
     "links": [],
     "panels": [
       {
-        "datasource": null,
+        "datasource": "Pyroscope",
+        "description": "",
         "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
+          "defaults": {},
           "overrides": []
         },
         "gridPos": {
-          "h": 9,
+          "h": 17,
           "w": 12,
           "x": 0,
           "y": 0
         },
         "id": 2,
-        "options": {
-          "legend": {
-            "calcs": [],
-            "displayMode": "list",
-            "placement": "bottom"
-          },
-          "tooltip": {
-            "mode": "single"
+        "pluginVersion": "7.3.6",
+        "targets": [
+          {
+            "format": "json",
+            "from": "now-1h",
+            "name": "pyroscope.server.cpu",
+            "queryType": "randomWalk",
+            "refId": "A",
+            "until": "now"
           }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Pyroscope Server CPU",
+        "type": "pyroscope-panel"
+      },
+      {
+        "datasource": "Pyroscope",
+        "description": "",
+        "fieldConfig": {
+          "defaults": {},
+          "overrides": []
         },
-        "title": "Panel Title",
-        "type": "timeseries"
+        "gridPos": {
+          "h": 17,
+          "w": 12,
+          "x": 12,
+          "y": 0
+        },
+        "id": 3,
+        "pluginVersion": "7.3.6",
+        "targets": [
+          {
+            "format": "json",
+            "from": "now-1h",
+            "name": "pyroscope.server.alloc_space",
+            "queryType": "randomWalk",
+            "refId": "A",
+            "until": "now"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Pyroscope Server Memory Allocations",
+        "type": "pyroscope-panel"
       }
     ],
     "refresh": "",
